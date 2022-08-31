@@ -1,0 +1,66 @@
+{
+    "name": "simple-vm",
+    "id": "/subscriptions/16c3cf4c-8ae4-4bb3-88d9-72933a271ded/resourceGroups/ResGroup2/providers/Microsoft.Compute/virtualMachines/simple-vm",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "centralindia",
+    "properties": {
+        "vmId": "7636e2b5-7b04-4702-acaa-e5528701d2f5",
+        "hardwareProfile": {
+            "vmSize": "Standard_D2s_v5"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "MicrosoftWindowsServer",
+                "offer": "WindowsServer",
+                "sku": "2022-datacenter-azure-edition-core",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Windows",
+                "name": "simple-vm_OsDisk_1_e5c0880bceea4d449d74e4956d47965b",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "id": "/subscriptions/16c3cf4c-8ae4-4bb3-88d9-72933a271ded/resourceGroups/ResGroup2/providers/Microsoft.Compute/disks/simple-vm_OsDisk_1_e5c0880bceea4d449d74e4956d47965b"
+                },
+                "diskSizeGB": 127
+            },
+            "dataDisks": [
+                {
+                    "lun": 0,
+                    "name": "simple-vm_disk2_2f97df3ca8454038afec33d374571d44",
+                    "createOption": "Empty",
+                    "caching": "None",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/16c3cf4c-8ae4-4bb3-88d9-72933a271ded/resourceGroups/ResGroup2/providers/Microsoft.Compute/disks/simple-vm_disk2_2f97df3ca8454038afec33d374571d44"
+                    },
+                    "diskSizeGB": 1023
+                }
+            ]
+        },
+        "osProfile": {
+            "computerName": "simple-vm",
+            "adminUsername": "mayurimestry",
+            "windowsConfiguration": {
+                "provisionVMAgent": true,
+                "enableAutomaticUpdates": true
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/16c3cf4c-8ae4-4bb3-88d9-72933a271ded/resourceGroups/ResGroup2/providers/Microsoft.Network/networkInterfaces/myVMNic"
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true,
+                "storageUri": "https://bootdiagshxwquxvash346.blob.core.windows.net/"
+            }
+        },
+        "provisioningState": "Succeeded"
+    }
+}
